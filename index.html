@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfTiHMPSMRx336G6DS028dl9IEbkpwACYhEhqnpLxC_baZtRI9gxtB5hj_385fPuntKKs&usqp=CAU"
+        type="image/x-icon">
+    <title>Log base2 Calculator</title>
+
+    <script>
+        var base = 2;
+
+        function log2base(input1) {
+            var input1 = document.getElementById("input1").value;
+            var result1 = Math.log(input1) / Math.log(2);
+            document.getElementById("result").value = result1.toFixed(4);
+        }
+    </script>
+
+    <style>
+        body {
+            background: url("https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main_text {
+            font-size: 50px;
+        }
+
+        .h2 {
+            font-size: 38px;
+            text-shadow: 1px 1px red;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4%;
+            flex-direction: column;
+        }
+
+        .enterinput {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .calculatebutton {
+            font-size: 23px;
+        }
+
+        .resultbutton {
+            font-size: 30px;
+        }
+
+        .table {
+            margin: 30px;
+        }
+
+        #input1 {
+            height: 40px;
+            width: 180px;
+            font-size: 18pt;
+            caret-color: red;
+            color: red;
+        }
+
+        #result {
+            height: 40px;
+            width: 180px;
+            font-size: 18pt;
+            caret-color: red;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="marquee">
+        <marquee behavior="" direction="left" scrollamount="10">
+            <h2 class="h2">Welcome To Log Base2 Calculator </h2>
+        </marquee>
+    </div>
+
+    <div class="content">
+        <h1 class="main_text">Log Base2 Calculator</h1>
+        <form method="post">
+            <table class="table">
+                <tr>
+                    <td class="enterinput">Enter The Number (X) : </td>
+                    <td><input type="text" name="input1" size="25" maxlength="4" class="input1" id="input1"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="calculatebutton" type="button" value="Calculate" onclick="log2base()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="resultbutton">The value Of Log<sub>2</sub>X&nbsp; = &nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="text" name="result" size="25" id="result" maxlength="4"></td>
+                </tr>
+
+            </table>
+
+    </div>
+    </form>
+
+</body>
+
+</html>
